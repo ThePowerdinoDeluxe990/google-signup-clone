@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">google_signup</string>
+    <string name="error_message">Put a email o a phone number</string>
+    <string name="error_icon_description">Error icon</string>
+    <string name="sign_in">Sign in</string>
+    <string name="sing_in_with">Email or phone</string>
+    <string name="learn_more">Learn more</string>
+    <string name="google_account">with your Google Account</string>
+    <string name="next_btn">Next</string>
+    <string name="password_title">Welcome</string>
+    <string name="create_account">Create account</string>
+    <string name="logo_desc">Google logo</string>
+    <string name="forgot">Forgot email?</string>
+</resources>
