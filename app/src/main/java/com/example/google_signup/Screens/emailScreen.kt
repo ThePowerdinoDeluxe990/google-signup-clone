@@ -108,7 +108,8 @@ private fun emailScreenContent(navController: NavController?){
                     Button(
                         onClick = {
                             errorTextField = true
-                            val vibrator = context.getSystemService(Context.VIBRATOR_SERVICE) as Vibrator
+// TODO refactor this using the latest API, VIBRATOR_SERVICE is DEPRECATED                          
+val vibrator = context.getSystemService(Context.VIBRATOR_SERVICE) as Vibrator
                             val vibrationEffect1: VibrationEffect =
                                 if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
                                     Log.i("BUZZ","Vibration")
