@@ -85,6 +85,7 @@ private fun emailScreenContent(navController: NavController?){
                 )
 
                 //Checking if the textfield is empty
+                //TODO Add regex
                 if (userEmail.isEmpty()) {
                     Button(
                         onClick = {
