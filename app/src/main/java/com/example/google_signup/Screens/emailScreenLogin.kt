@@ -1,13 +1,7 @@
 package com.example.google_signup.Screens
 
 import android.annotation.SuppressLint
-import android.content.Context
-import android.content.Context.*
 import android.os.Build
-import android.os.VibrationEffect
-import android.os.Vibrator
-import android.os.VibratorManager
-import android.util.Log
 import androidx.annotation.RequiresApi
 import androidx.compose.animation.animateContentSize
 import androidx.compose.animation.core.Spring
@@ -31,7 +25,6 @@ import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
-import androidx.core.content.ContextCompat.getSystemService
 import com.example.google_signup.R
 
 @RequiresApi(Build.VERSION_CODES.S)
@@ -67,8 +60,7 @@ fun emailScreenLogin(value:String,errorText:Boolean, onValueChange: (String) -> 
         Row {
             Text(stringResource(id = R.string.google_account))
             Spacer(Modifier.size(5.dp))
-            // TODO Put this in another file
-            link_Text(R.string.learn_more,uriHandler)
+            link_Text(R.string.learn_more,uriHandler,Modifier)
         }
 
         Spacer(modifier = Modifier.size(30.dp))
@@ -90,7 +82,6 @@ fun emailScreenLogin(value:String,errorText:Boolean, onValueChange: (String) -> 
         Spacer(Modifier.size(10.dp))
         if(errorText){
             ErrorComposable()
-
         }
     }
 
@@ -100,10 +91,11 @@ fun emailScreenLogin(value:String,errorText:Boolean, onValueChange: (String) -> 
             .fillMaxWidth()
             .padding(
                 start = 25.dp,
-                top = 10.dp
+                top = 10.dp,
             )
     ) {
-        link_Text(linkString = R.string.create_account, uriHandler = uriHandler)
+        link_Text(linkString = R.string.create_account, uriHandler = uriHandler, Modifier
+        )
     }
 }
 
