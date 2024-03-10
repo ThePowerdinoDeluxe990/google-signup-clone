@@ -20,7 +20,7 @@ fun passwordScreen(navController: NavController, text:String?){
     }
 }
 
-// @TODO finish this
+//TODO finish this
 @Composable
 private fun passwordScreenContent(navController: NavController, text: String?){
     Column {

@@ -56,8 +56,6 @@ private fun emailScreenContent(navController: NavController?){
     var errorTextField by remember {
         mutableStateOf(false)
     }
-    //For redirect
-    val uriHandler = LocalUriHandler.current
 
     //Vibration variables
     val vibration_call = Vibration_Class()
@@ -76,13 +74,9 @@ private fun emailScreenContent(navController: NavController?){
                         bottom = 10.dp
                     )
                     .fillMaxSize(),
-                horizontalArrangement = Arrangement.SpaceBetween,
+                horizontalArrangement = Arrangement.End,
                 verticalAlignment = Alignment.Bottom
                 ) {
-
-                link_Text(linkString = R.string.create_account, uriHandler = uriHandler,
-                    Modifier.padding(bottom = 10.dp)
-                )
 
                 //Checking if the textfield is empty
                 //TODO Add regex

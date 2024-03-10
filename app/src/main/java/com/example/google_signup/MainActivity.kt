@@ -14,9 +14,7 @@ import com.example.google_signup.ui.theme.Google_signupTheme
 
 
 class MainActivity : ComponentActivity() {
-
     override fun onCreate(savedInstanceState: Bundle?) {
-
         super.onCreate(savedInstanceState)
         setContent {
             Google_signupTheme {
@@ -25,7 +23,6 @@ class MainActivity : ComponentActivity() {
                     color = MaterialTheme.colorScheme.background
                 ) {
                     appNavigation()
-
                 }
             }
         }
@@ -36,7 +33,7 @@ class MainActivity : ComponentActivity() {
 
 @Preview(showBackground = true, showSystemUi = true)
 @Composable
-fun GreetingPreview() {
+private fun Preview() {
     Google_signupTheme {
         appNavigation()
     }

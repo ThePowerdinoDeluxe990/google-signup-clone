@@ -1,5 +1,7 @@
 package com.example.google_signup.navigation
 
+import android.os.Build
+import androidx.annotation.RequiresApi
 import androidx.compose.animation.AnimatedContentTransitionScope
 import androidx.compose.animation.core.tween
 import androidx.compose.animation.fadeIn
@@ -14,6 +16,7 @@ import com.example.google_signup.Screens.emailScreen
 import com.example.google_signup.Screens.passwordScreen
 
 //The navigation of the app
+@RequiresApi(Build.VERSION_CODES.S)
 @Composable
 fun appNavigation(){
     val navController = rememberNavController()
@@ -28,7 +31,7 @@ fun appNavigation(){
             )+ fadeOut(animationSpec = tween(1000))
         },
         enterTransition = {
-              fadeIn(animationSpec = tween(2000))
+              fadeIn(animationSpec = tween(1000))
         },
         ){
         composable(route = AppScreens.emailScreen.route){
