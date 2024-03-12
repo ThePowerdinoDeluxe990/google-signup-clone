@@ -14,15 +14,15 @@ import com.example.google_signup.navigation.AppScreens
 
 @SuppressLint("UnusedMaterial3ScaffoldPaddingParameter")
 @Composable
-fun passwordScreen(navController: NavController, text:String?){
+fun PasswordScreen(navController: NavController, text:String?){
     Scaffold {
-        passwordScreenContent(navController,text)
+        PasswordScreenContent(navController,text)
     }
 }
 
 //TODO finish this
 @Composable
-private fun passwordScreenContent(navController: NavController, text: String?){
+private fun PasswordScreenContent(navController: NavController, text: String?){
     Column {
         Text(stringResource(R.string.password_title))
         text?.let{

@@ -9,7 +9,7 @@ import android.util.Log
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.platform.LocalContext
 
-class Vibration_Class {
+class VibrationClass {
 
     @Composable
     protected fun returnContext(): Context {
@@ -17,7 +17,7 @@ class Vibration_Class {
         return context
     }
     @Composable
-    fun return_Vibrator(): Vibrator {
+    fun returnVibrator(): Vibrator {
         val context = returnContext()
         //Vibration using the latest API and checks if the API is supported
         val vibrator = if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.S) {
@@ -34,7 +34,7 @@ class Vibration_Class {
 
     }
 
-    fun Get_Vibration_Effect(): VibrationEffect {
+    fun getVibrationEffect(): VibrationEffect {
         //The vibration Effect
         val vibrationEffect1: VibrationEffect =
             if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {

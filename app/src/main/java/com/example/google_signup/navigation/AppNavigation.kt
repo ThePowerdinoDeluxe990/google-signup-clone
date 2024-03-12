@@ -12,13 +12,13 @@ import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
 import androidx.navigation.navArgument
-import com.example.google_signup.Screens.emailScreen
-import com.example.google_signup.Screens.passwordScreen
+import com.example.google_signup.Screens.EmailScreen
+import com.example.google_signup.Screens.PasswordScreen
 
 //The navigation of the app
 @RequiresApi(Build.VERSION_CODES.S)
 @Composable
-fun appNavigation(){
+fun AppNavigation(){
     val navController = rememberNavController()
     NavHost(
         navController = navController,
@@ -35,14 +35,14 @@ fun appNavigation(){
         },
         ){
         composable(route = AppScreens.emailScreen.route){
-            emailScreen(navController)
+            EmailScreen(navController)
         }
         composable(route = AppScreens.passwordScreen.route + "/{text}", arguments = listOf(
             navArgument(name ="text"){
           type= NavType.StringType
         })
         ){
-            passwordScreen(navController, it.arguments?.getString("text"))
+            PasswordScreen(navController, it.arguments?.getString("text"))
         }
     }
 }

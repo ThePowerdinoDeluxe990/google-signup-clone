@@ -11,7 +11,7 @@ import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontWeight
 
 @Composable
-fun link_Text(@StringRes linkString:Int, uriHandler: UriHandler,modifier: Modifier) {
+fun LinkText(@StringRes linkString:Int, uriHandler: UriHandler,modifier:Modifier) {
     Text(
         text = stringResource(linkString),
         color = MaterialTheme.colorScheme.primary,

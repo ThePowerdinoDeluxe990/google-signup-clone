@@ -24,7 +24,6 @@ import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.platform.LocalUriHandler
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
@@ -34,20 +33,18 @@ import com.example.google_signup.navigation.AppScreens
 import com.example.google_signup.ui.theme.Google_signupTheme
 
 //For the app navigation
-@RequiresApi(Build.VERSION_CODES.S)
 @SuppressLint("UnusedMaterial3ScaffoldPaddingParameter")
 @Composable
-fun emailScreen(navController: NavController){
+fun EmailScreen(navController: NavController){
     Scaffold {
-        emailScreenContent(navController)
+        EmailScreenContent(navController)
     }
 }
 
 
 @Composable
-@RequiresApi(Build.VERSION_CODES.O)
 @SuppressLint("UnusedMaterial3ScaffoldPaddingParameter", "NewApi")
-private fun emailScreenContent(navController: NavController?){
+private fun EmailScreenContent(navController: NavController?){
     //States
 
     var userEmail by remember {
@@ -58,9 +55,9 @@ private fun emailScreenContent(navController: NavController?){
     }
 
     //Vibration variables
-    val vibration_call = Vibration_Class()
-    val vibrator = vibration_call.return_Vibrator()
-    val vibrationEffect1 = vibration_call.Get_Vibration_Effect()
+    val vibrationCall = VibrationClass()
+    val vibrator = vibrationCall.returnVibrator()
+    val vibrationEffect1 = vibrationCall.getVibrationEffect()
 
     Scaffold(
         //Next and create account buttons
@@ -120,7 +117,7 @@ private fun emailScreenContent(navController: NavController?){
     ){
         Column{
             Spacer(modifier = Modifier.size(15.dp))
-                emailScreenLogin(
+                EmailScreenLogin(
                     userEmail,
                     onValueChange = { userEmail = it },
                     errorText = errorTextField,
@@ -145,10 +142,10 @@ private fun emailScreenContent(navController: NavController?){
     backgroundColor = 0xFF1A1C1E
 )
 @Composable
-private fun emailScreenPreview() {
+private fun EmailScreenPreview() {
     Google_signupTheme {
         Surface{
-           emailScreenContent(null)
+           EmailScreenContent(null)
         }
     }
 }

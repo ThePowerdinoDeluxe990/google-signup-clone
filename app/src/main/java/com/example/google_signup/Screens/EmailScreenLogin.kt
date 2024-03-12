@@ -1,8 +1,6 @@
 package com.example.google_signup.Screens
 
 import android.annotation.SuppressLint
-import android.os.Build
-import androidx.annotation.RequiresApi
 import androidx.compose.animation.animateContentSize
 import androidx.compose.animation.core.Spring
 import androidx.compose.animation.core.spring
@@ -27,10 +25,9 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.example.google_signup.R
 
-@RequiresApi(Build.VERSION_CODES.S)
 @SuppressLint("ServiceCast")
 @Composable
-fun emailScreenLogin(value:String,errorText:Boolean, onValueChange: (String) -> Unit){
+fun EmailScreenLogin(value:String, errorText:Boolean, onValueChange: (String) -> Unit){
 
     //For redirect
     val uriHandler = LocalUriHandler.current
@@ -60,7 +57,7 @@ fun emailScreenLogin(value:String,errorText:Boolean, onValueChange: (String) -> 
         Row {
             Text(stringResource(id = R.string.google_account))
             Spacer(Modifier.size(5.dp))
-            link_Text(R.string.learn_more,uriHandler,Modifier)
+            LinkText(R.string.learn_more,uriHandler,Modifier)
         }
 
         Spacer(modifier = Modifier.size(30.dp))
@@ -94,7 +91,7 @@ fun emailScreenLogin(value:String,errorText:Boolean, onValueChange: (String) -> 
                 top = 10.dp,
             )
     ) {
-        link_Text(linkString = R.string.create_account, uriHandler = uriHandler, Modifier
+        LinkText(linkString = R.string.create_account, uriHandler = uriHandler, Modifier
         )
     }
 }
