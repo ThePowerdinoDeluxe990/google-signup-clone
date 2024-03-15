@@ -33,6 +33,10 @@ private fun PasswordScreenContent(navController: NavController, text: String?){
         }) {
             Text(stringResource(R.string.next_btn))
         }
+
+        if (text != null) {
+            UserCard(userName = text)
+        }
     }
 }
 
