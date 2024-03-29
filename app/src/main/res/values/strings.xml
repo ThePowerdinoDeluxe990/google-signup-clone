@@ -15,4 +15,5 @@
     <string name="dropdown_icon_desc">Dropdown icon</string>
     <string name="put_password_desc">Enter your password</string>
     <string name="show_password">Show password</string>
+    <string name="password_error">Password is empty</string>
 </resources>

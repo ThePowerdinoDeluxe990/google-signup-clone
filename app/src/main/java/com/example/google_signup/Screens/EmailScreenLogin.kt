@@ -83,7 +83,7 @@ fun EmailScreenLogin(value:String, errorText:Boolean, onValueChange: (String) ->
 
         Spacer(Modifier.size(10.dp))
         if(errorText){
-            ErrorComposable()
+            ErrorComposable(R.string.error_message)
         }
     }
 

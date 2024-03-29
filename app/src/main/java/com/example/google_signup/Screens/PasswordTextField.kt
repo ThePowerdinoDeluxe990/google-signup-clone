@@ -75,10 +75,8 @@ fun PasswordTextField(password:String,errorOrNot:Boolean, onValueChange:(String)
             horizontalArrangement = Arrangement.Center,
         ){
             if(errorOrNot){
-
-                ErrorComposable()
+                ErrorComposable(R.string.password_error)
             }else if(errorOrNot == false){
-
             }
         }
         ShowAndHide(

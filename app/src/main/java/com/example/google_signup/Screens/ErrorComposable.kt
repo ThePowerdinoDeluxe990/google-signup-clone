@@ -1,5 +1,6 @@
 package com.example.google_signup.Screens
 
+import androidx.annotation.StringRes
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.size
@@ -16,7 +17,7 @@ import com.example.google_signup.R
 
 // The Error composable
 @Composable
-fun ErrorComposable(){
+fun ErrorComposable( @StringRes message:Int){
     Row {
         Icon(
             Icons.Outlined.Info,
@@ -25,7 +26,7 @@ fun ErrorComposable(){
         )
         Spacer(Modifier.size(10.dp))
         Text(
-            text = stringResource(R.string.error_message),
+            text = stringResource(message),
             color = MaterialTheme.colorScheme.error,
         )
     }
