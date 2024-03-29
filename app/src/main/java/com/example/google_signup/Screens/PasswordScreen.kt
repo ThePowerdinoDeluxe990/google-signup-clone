@@ -135,7 +135,6 @@ fun PasswordScreen(navController: NavController?, text:String?){
     }
 }
 
-//TODO finish this
 
 @RequiresApi(Build.VERSION_CODES.S)
 @Preview(
