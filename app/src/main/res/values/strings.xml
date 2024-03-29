@@ -13,4 +13,6 @@
     <string name="forgot">Forgot email?</string>
     <string name="user_icon_desc">User icon</string>
     <string name="dropdown_icon_desc">Dropdown icon</string>
+    <string name="put_password_desc">Enter your password</string>
+    <string name="show_password">Show password</string>
 </resources>

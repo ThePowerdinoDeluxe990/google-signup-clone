@@ -75,7 +75,7 @@ private fun EmailScreenContent(navController: NavController?){
                 verticalAlignment = Alignment.Bottom
                 ) {
                 //Checking if the textfield is empty
-                //TODO Add regex
+
                 if (userEmail.isEmpty()) {
                     Button(
                         onClick = {

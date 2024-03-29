@@ -50,7 +50,6 @@ fun UserCard(userName:String){
     }
 
     OutlinedCard(
-
         border = BorderStroke(1.dp,MaterialTheme.colorScheme.outline),
         colors = CardDefaults.cardColors(
            containerColor = MaterialTheme.colorScheme.background
@@ -61,7 +60,6 @@ fun UserCard(userName:String){
                Modifier.padding(
                    2.dp
                )
-
            ){
 
                Spacer(Modifier.size(2.dp))
@@ -88,7 +86,6 @@ fun UserCard(userName:String){
                        showAlertDialog = true
                    }
                )
-
 
                Spacer(Modifier.size(3.dp))
        }

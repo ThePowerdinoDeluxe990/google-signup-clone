@@ -1,6 +1,9 @@
 package com.example.google_signup.Screens
 
 import android.annotation.SuppressLint
+import android.content.res.Configuration
+import android.os.Build
+import androidx.annotation.RequiresApi
 import androidx.compose.animation.animateContentSize
 import androidx.compose.animation.core.Spring
 import androidx.compose.animation.core.spring
@@ -21,9 +24,11 @@ import androidx.compose.ui.graphics.ColorFilter
 import androidx.compose.ui.platform.LocalUriHandler
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.res.stringResource
+import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.example.google_signup.R
+import com.example.google_signup.ui.theme.Google_signupTheme
 
 @SuppressLint("ServiceCast")
 @Composable
@@ -93,6 +98,29 @@ fun EmailScreenLogin(value:String, errorText:Boolean, onValueChange: (String) ->
     ) {
         LinkText(linkString = R.string.create_account, uriHandler = uriHandler, Modifier
         )
+    }
+}
+
+@RequiresApi(Build.VERSION_CODES.S)
+@Preview(
+    showBackground = true,
+    name = "Light",
+    showSystemUi = true,
+    backgroundColor = 0xFFFCFCFF
+)
+@Preview(
+    showBackground = true,
+    uiMode = Configuration.UI_MODE_NIGHT_YES,
+    name = "Dark",
+    showSystemUi = true,
+    backgroundColor = 0xFF1A1C1E
+)
+@Composable
+private fun Preview(){
+    Google_signupTheme {
+        EmailScreenLogin(value = "Pepe", errorText = false){
+
+        }
     }
 }
 
