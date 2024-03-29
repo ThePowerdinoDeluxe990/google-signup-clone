@@ -53,6 +53,7 @@ fun PasswordTextField(password:String,errorOrNot:Boolean, onValueChange:(String)
                ),
            value = password,
            onValueChange = onValueChange,
+           isError =  errorOrNot,
            placeholder = { Text(text = stringResource(R.string.put_password_desc))},
            singleLine = true,
            visualTransformation = if (passwordVisible) {
